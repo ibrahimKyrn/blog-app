@@ -8,7 +8,7 @@ function Header() {
         <span>BLOG</span>
       </Link>
       <nav>
-        <Link href="https://github.com/ibrahimKyrn" target="_blank">
+        <Link href="/" target="_blank">
           About
         </Link>
       </nav>
