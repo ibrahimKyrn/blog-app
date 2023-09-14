@@ -1,8 +1,18 @@
 import BlogCard from "../components/BlogCard";
-export default function Home() {
+import styles from "./styles.module.css";
+async function getPosts() {
+  const response = await fetch("https://dummyjson.com/posts?limit=10");
+  return response.json();
+}
+
+export default async function Home() {
+  const { posts } = await getPosts();
+
   return (
-    <div>
-      <BlogCard />
+    <div className={styles.blogContainer}>
+      {posts.map((post) => (
+        <BlogCard key={post.id} {...post} />
+      ))}
     </div>
   );
 }
