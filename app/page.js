@@ -1,3 +1,4 @@
+import { JSX } from "react";
 import BlogCard from "../components/BlogCard";
 import styles from "./styles.module.css";
 
